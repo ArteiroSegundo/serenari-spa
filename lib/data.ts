@@ -1,5 +1,6 @@
 export const WHATSAPP_BASE = "https://wa.me/551151081983";
 export const GOOGLE_REVIEWS_URL = "https://maps.app.goo.gl/J1rNn4WwhbDD5uqx9";
+export const GOOGLE_REVIEW_COUNT = 139;
 
 export function whatsappLink(text: string) {
   return `${WHATSAPP_BASE}?text=${encodeURIComponent(text)}`;

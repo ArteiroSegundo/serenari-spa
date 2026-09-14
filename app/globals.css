@@ -680,6 +680,40 @@ nav a:hover::after {
     font-style: italic;
 }
 
+.google-rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -20px;
+    margin-bottom: 40px;
+    padding: 12px 24px;
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.google-rating-badge:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.google-rating-badge i.fa-google {
+    color: #4285F4;
+    font-size: 1.1rem;
+}
+
+.google-rating-stars {
+    color: #D4AF37;
+    font-size: 0.8rem;
+    display: inline-flex;
+    gap: 2px;
+}
+
 .google-verified-badge {
     display: inline-flex;
     align-items: center;
@@ -1613,6 +1647,15 @@ footer {
     .testimonial-card blockquote p {
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+
+    .google-rating-badge {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 18px;
+        font-size: 0.85rem;
+        margin-top: 0;
     }
 
     /* AJUSTE DE POSIÇÃO DO BOTÃO TOPO MOBILE */

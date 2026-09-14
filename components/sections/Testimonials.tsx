@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Carousel from "@/components/Carousel";
-import { testimonials, GOOGLE_REVIEWS_URL } from "@/lib/data";
+import { testimonials, GOOGLE_REVIEWS_URL, GOOGLE_REVIEW_COUNT } from "@/lib/data";
 
 export default function Testimonials() {
   return (
@@ -8,6 +8,22 @@ export default function Testimonials() {
       <div data-aos="fade-up">
         <h2>O que Nossos Clientes Dizem</h2>
         <p className="section-subtitle">A satisfação de quem confia em nosso trabalho é nossa maior motivação.</p>
+        <a
+          href={GOOGLE_REVIEWS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="google-rating-badge"
+        >
+          <i className="fa-brands fa-google"></i>
+          <span className="google-rating-stars">
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+            <i className="fa-solid fa-star"></i>
+          </span>
+          <span>+ de {GOOGLE_REVIEW_COUNT} avaliações 5 estrelas no Google!</span>
+        </a>
       </div>
 
       <Carousel
