@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Carousel from "@/components/Carousel";
-import { services, whatsappLink } from "@/lib/data";
+import ServiceCard from "@/components/ServiceCard";
+import { services } from "@/lib/data";
 
 export default function Services() {
   return (
@@ -20,22 +20,7 @@ export default function Services() {
         data-aos-delay="200"
       >
         {services.map((service) => (
-          <div className="service-card" key={service.title}>
-            <Image
-              src={service.img}
-              alt={service.alt}
-              width={service.width}
-              height={service.height}
-              className="service-card-img"
-            />
-            <div className="service-card-content">
-              <h3>{service.title}</h3>
-              <p className="service-description">{service.description}</p>
-              <a href={whatsappLink(service.whatsappText)} className="btn" target="_blank" rel="noreferrer">
-                Saiba Mais
-              </a>
-            </div>
-          </div>
+          <ServiceCard service={service} key={service.title} />
         ))}
       </Carousel>
     </main>
