@@ -411,6 +411,7 @@ nav a:hover::after {
 
 .about-us-logo {
     width: 180px;
+    height: auto;
     margin-bottom: 30px;
     margin-left: 300px;
 
