@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Carousel from "@/components/Carousel";
-import { testimonials } from "@/lib/data";
+import { testimonials, GOOGLE_REVIEWS_URL } from "@/lib/data";
 
 export default function Testimonials() {
   return (
@@ -40,6 +40,15 @@ export default function Testimonials() {
             <blockquote>
               <p>&quot;{testimonial.quote}&quot;</p>
             </blockquote>
+            <a
+              href={GOOGLE_REVIEWS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="google-verified-badge"
+            >
+              <i className="fa-brands fa-google"></i>
+              Avaliação verificada no Google
+            </a>
           </div>
         ))}
       </Carousel>

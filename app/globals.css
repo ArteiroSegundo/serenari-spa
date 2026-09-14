@@ -680,6 +680,34 @@ nav a:hover::after {
     font-style: italic;
 }
 
+.google-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 18px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background-color: var(--bg-light);
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.google-verified-badge i {
+    color: #4285F4;
+    font-size: 0.85rem;
+}
+
+.google-verified-badge:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.google-verified-badge:hover i {
+    color: white;
+}
+
 /* =========================================
    ENDEREÇO E MAPA
    ========================================= */
