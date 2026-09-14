@@ -31,7 +31,7 @@
     /* Bordas mais retas = mais elegância */
     --radius-md: 8px;
 
-    --font-family: "Montserrat", sans-serif;
+    --font-family: var(--font-montserrat), "Montserrat", sans-serif;
     --container-width: 1200px;
 }
 
@@ -218,7 +218,7 @@ nav a:hover::after {
     background-image: linear-gradient(to right,
             rgba(0, 0, 0, 0.9) 0%,
             rgba(0, 0, 0, 0.6) 40%,
-            rgba(0, 0, 0, 0) 70%), url('background-hero.jpg');
+            rgba(0, 0, 0, 0) 70%), url('/background-hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -387,7 +387,7 @@ nav a:hover::after {
     background-color: var(--bg-light);
     /* Cor de fundo caso a imagem falhe */
     /* ADICIONADO: Imagem de fundo com padrão */
-    background-image: url('pattern-bg.jpg');
+    background-image: url('/pattern-bg.jpg');
     background-size: 300px;
     /* Ajuste este valor para aumentar/diminuir o tamanho do desenho */
     background-repeat: repeat;
@@ -1205,7 +1205,7 @@ footer {
         background-image: linear-gradient(to right,
                 rgba(0, 0, 0, 0.3) 100%,
                 rgba(0, 0, 0, 0.3) 100%,
-                rgba(0, 0, 0, 0.3) 100%), url('background-hero-mobile.jpg');
+                rgba(0, 0, 0, 0.3) 100%), url('/background-hero-mobile.jpg');
         background-size: cover;
         background-position: center;
         background-size: cover;
