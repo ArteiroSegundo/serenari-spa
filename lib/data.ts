@@ -199,17 +199,17 @@ export const services: Service[] = [
     whatsappText: "Olá, gostaria de saber mais sobre a Esfoliação Corporal.",
   },
   {
-    img: "/services/revitalizacao-facial/01.jpg",
+    img: "/services/revitalizacao-facial/03.jpg",
     width: 1600,
-    height: 1612,
+    height: 1934,
     alt: "Revitalização Facial",
     title: "Revitalização Facial",
     description:
       "Proporcione nutrição e hidratação intensa para sua pele, restaurando o brilho natural e a vitalidade do seu rosto.",
     whatsappText: "Olá, gostaria de saber mais sobre a Revitalização Facial.",
     gallery: [
+      { src: "/services/revitalizacao-facial/01.jpg", width: 1600, height: 1612 },
       { src: "/services/revitalizacao-facial/02.jpg", width: 1600, height: 2133 },
-      { src: "/services/revitalizacao-facial/03.jpg", width: 1600, height: 1934 },
       { src: "/services/revitalizacao-facial/04.jpg", width: 1600, height: 1880 },
     ],
   },
