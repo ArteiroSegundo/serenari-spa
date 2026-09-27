@@ -46,9 +46,9 @@ export default function VideoGallery() {
   return (
     <section id="videos" className="video-gallery-section">
       <div data-aos="fade-up">
-        <h2>Sua Pausa Consciente em Vídeo</h2>
+        <h2>Sinta a Experiência Serenari</h2>
         <p className="section-subtitle">
-          Veja de perto a atmosfera sensorial, a dedicação e o cuidado humanizado que preparamos para você.
+          Dê o primeiro passo em direção ao seu bem-estar. Explore nossos rituais, sinta a atmosfera de serenidade e veja como cuidamos de você.
         </p>
       </div>
 
@@ -91,7 +91,7 @@ export default function VideoGallery() {
                 <div className="video-play-button">
                   <i className="fa-solid fa-play"></i>
                 </div>
-                <span>Assistir Vídeo</span>
+                <span>VER EXPERIÊNCIA</span>
               </div>
             </div>
 
