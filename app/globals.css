@@ -1992,11 +1992,15 @@ footer {
     z-index: 4000;
     background-color: rgba(0, 0, 0, 0.88);
     backdrop-filter: blur(8px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 20px;
     animation: fadeIn 0.3s ease;
+}
+
+.video-modal-backdrop.active {
+    display: flex;
 }
 
 .video-modal-container {
