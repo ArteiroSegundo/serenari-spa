@@ -328,10 +328,10 @@ export type GalleryImage = {
 };
 
 export const galleryImages: GalleryImage[] = [
+  { img: "/sobre-nos/04.jpg", width: 1600, height: 2181, alt: "Espaço de espera com logo Serenari Spa" },
   { img: "/sobre-nos/01.jpg", width: 1086, height: 1448, alt: "Lounge de espera do Serenari Spa" },
   { img: "/sobre-nos/02.jpg", width: 1201, height: 1309, alt: "Recepção do Serenari Spa" },
   { img: "/sobre-nos/03.jpg", width: 1600, height: 2133, alt: "Estação de café e boas-vindas" },
-  { img: "/sobre-nos/04.jpg", width: 1600, height: 2181, alt: "Espaço de espera com logo Serenari Spa" },
   { img: "/sobre-nos/05.jpg", width: 1600, height: 2133, alt: "Sala de massagem preparada" },
   { img: "/sobre-nos/06.jpg", width: 1600, height: 2133, alt: "Detalhe da bandeja de boas-vindas" },
   { img: "/sobre-nos/07.jpg", width: 1600, height: 2133, alt: "Sala de massagem individual" },
