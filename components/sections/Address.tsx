@@ -41,18 +41,29 @@ export default function Address() {
         </div>
 
         <div className="how-to-arrive-card">
-          <div className="how-to-arrive-preview" onClick={() => setShowHowToArriveVideo(true)}>
+          <div
+            className="how-to-arrive-preview"
+            role="button"
+            tabIndex={0}
+            onClick={() => setShowHowToArriveVideo(true)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setShowHowToArriveVideo(true);
+              }
+            }}
+          >
             <video
-              src="/videos/Como chegar no Serenari.mp4"
+              src="/videos/Como chegar no Serenari.mp4#t=0.001"
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="auto"
               className="how-to-arrive-video"
               onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
               onMouseLeave={(e) => {
                 e.currentTarget.pause();
-                e.currentTarget.currentTime = 0;
+                e.currentTarget.currentTime = 0.001;
               }}
             />
             <div className="video-play-overlay">

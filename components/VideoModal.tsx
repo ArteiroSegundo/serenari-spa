@@ -19,13 +19,19 @@ export default function VideoModal({
   onClose,
 }: VideoModalProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const cleanVideoSrc = videoSrc ? videoSrc.split("#")[0] : null;
 
   useEffect(() => {
     if (isOpen && videoRef.current) {
       videoRef.current.currentTime = 0;
-      videoRef.current.play().catch(() => {});
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((err) => {
+          console.warn("Video playback requires user interaction:", err);
+        });
+      }
     }
-  }, [isOpen, videoSrc]);
+  }, [isOpen, cleanVideoSrc]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -41,7 +47,7 @@ export default function VideoModal({
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen || !videoSrc) return null;
+  if (!isOpen || !cleanVideoSrc) return null;
 
   return (
     <div className="video-modal-backdrop" onClick={onClose}>
@@ -55,9 +61,11 @@ export default function VideoModal({
         <div className="video-modal-player-wrapper">
           <video
             ref={videoRef}
-            src={videoSrc}
+            src={cleanVideoSrc}
+            autoPlay
             controls
             playsInline
+            preload="auto"
             controlsList="nodownload"
             className="video-modal-player"
           />

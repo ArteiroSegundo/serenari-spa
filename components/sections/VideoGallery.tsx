@@ -19,7 +19,7 @@ const VIDEO_LIST: VideoItem[] = [
     title: "Ritual Terapêutico & Toque Humano",
     badge: "RITUAL DE CUIDADO",
     description: "Sinta a atmosfera de paz e acolhimento em cada toque de nossas massoterapeutas.",
-    src: "/videos/Massagem-01.mp4",
+    src: "/videos/Massagem-01.mp4#t=0.001",
     whatsappMessage: "Olá! Vi o vídeo do Ritual Terapêutico no site e gostaria de agendar uma sessão.",
   },
   {
@@ -27,7 +27,7 @@ const VIDEO_LIST: VideoItem[] = [
     title: "Alívio de Tensões & Presença",
     badge: "SENSORIAL",
     description: "Técnicas profundas para liberar restrições musculares e renovar suas energias.",
-    src: "/videos/Massagem-02.mp4",
+    src: "/videos/Massagem-02.mp4#t=0.001",
     whatsappMessage: "Olá! Vi o vídeo de Alívio de Tensões no site e gostaria de agendar uma sessão.",
   },
   {
@@ -35,7 +35,7 @@ const VIDEO_LIST: VideoItem[] = [
     title: "Como Funciona Sua Experiência",
     badge: "ACOLHIMENTO",
     description: "Conheça o passo a passo da sua recepção, avaliação personalizada e momento de pausa.",
-    src: "/videos/Como funciona a massagem.mp4",
+    src: "/videos/Como funciona a massagem.mp4#t=0.001",
     whatsappMessage: "Olá! Vi o vídeo sobre Como Funciona a Sessão no site e gostaria de mais informações.",
   },
 ];
@@ -62,7 +62,15 @@ export default function VideoGallery() {
           <div
             key={video.id}
             className="video-card"
+            role="button"
+            tabIndex={0}
             onClick={() => setActiveVideo(video)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                setActiveVideo(video);
+              }
+            }}
           >
             <div className="video-card-preview">
               <video
@@ -70,12 +78,12 @@ export default function VideoGallery() {
                 muted
                 loop
                 playsInline
-                preload="metadata"
+                preload="auto"
                 className="video-card-element"
                 onMouseEnter={(e) => e.currentTarget.play().catch(() => {})}
                 onMouseLeave={(e) => {
                   e.currentTarget.pause();
-                  e.currentTarget.currentTime = 0;
+                  e.currentTarget.currentTime = 0.001;
                 }}
               />
               <span className="video-badge">{video.badge}</span>
