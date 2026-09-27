@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <title>Serenari Spa | Massoterapia Humanizada em Suzano/SP</title>
+  <meta name="description" content="Espaço de massoterapia humanizada em Suzano/SP. Oferecemos experiências de bem-estar com acolhimento, presença e cuidado para transformar o toque em saúde e equilíbrio.">
+  <link rel="canonical" href="https://serenari-spa.vercel.app/">
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:site_name" content="Serenari Spa">
+  <meta property="og:title" content="Serenari Spa | Sua Pausa Consciente">
+  <meta property="og:description" content="Experiências completas de cuidado com o corpo e a mente em Suzano/SP. Transformamos o toque em bem-estar.">
+  <meta property="og:image" content="logo-about-us.png">
+  <meta property="og:url" content="https://serenari-spa.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Serenari Spa | Sua Pausa Consciente">
+  <meta name="twitter:description" content="Experiências completas de cuidado com o corpo e a mente em Suzano/SP. Transformamos o toque em bem-estar.">
+  <meta name="twitter:image" content="logo-about-us.png">
+
+  <!-- Preload Assets -->
+  <link rel="preload" href="background-hero.jpg" as="image">
+
+  <!-- FontAwesome & AOS Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "name": "Serenari Spa",
+    "image": "https://serenari-spa.vercel.app/logo-about-us.png",
+    "telephone": "+55-11-5108-1983",
+    "email": "atendimento@serenarispa.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Mal. Rondon, 192 - Jardim Santa Helena",
+      "addressLocality": "Suzano",
+      "addressRegion": "SP",
+      "postalCode": "08674-000",
+      "addressCountry": "BR"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "139"
+    },
+    "openingHours": "Mo-Sa 09:00-19:00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#hero" class="logo-link" aria-label="Ir para a página principal">
+      <img src="logo-about-us.png" alt="Serenari Spa Logo" class="logo" />
+    </a>
+    <nav>
+      <ul>
+        <li><a href="#hero">HOME</a></li>
+        <li><a href="#servicos">SERVIÇOS</a></li>
+        <li><a href="#avaliacoes">AVALIAÇÕES</a></li>
+        <li><a href="#sobre">SOBRE NÓS</a></li>
+        <li><a href="#endereco">ENDEREÇO</a></li>
+        <li><a href="#contato">CONTATOS</a></li>
+        <li>
+          <a href="https://wa.me/551151081983?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>(11) 5108-1983</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- HERO SECTION -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Sua Pausa Consciente em Suzano</h1>
+      <p>Transformamos o toque em saúde, leveza e renovação física e mental.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/551151081983?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20minha%20sess%C3%A3o%20no%20Serenari%20Spa." target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Minha Sessão
+        </a>
+        <a href="#servicos" class="btn btn-secondary">Conhecer Rituais</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="servicos" class="services-section">
+    <div data-aos="fade-up">
+      <h2>Nossos Serviços & Rituais</h2>
+      <p class="section-subtitle">
+        Técnicas exclusivas para aliviar tensões, restaurar a energia e promover um relaxamento profundo.
+      </p>
+    </div>
+
+    <div class="carousel-wrapper" id="services-wrapper" data-aos="fade-up" data-aos-delay="200">
+      <button type="button" class="carousel-btn prev-btn" aria-label="Item anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="services-container" id="services-slider">
+
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/massagem-relaxante/01.jpg" alt="Massagem Relaxante" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Massagem Relaxante</h3>
+            <p>Desconecte-se da rotina com toques suaves, aliviando o estresse, a ansiedade e renovando suas energias por completo.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Massagem%20Relaxante." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/massagem-terapeutica/01.jpg" alt="Massagem Terapêutica" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Massagem Terapêutica</h3>
+            <p>Focada em aliviar dores musculares crônicas e contraturas, restaurando sua mobilidade, conforto e bem-estar físico.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Massagem%20Terapêutica." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/massagem-localizada/01.jpg" alt="Massagem Localizada" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Massagem Localizada</h3>
+            <p>Alívio direcionado para áreas específicas de tensão ou dor, como pescoço, ombros ou lombar, proporcionando conforto imediato.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Massagem%20Localizada." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/massagem-desportiva/01.jpg" alt="Massagem Desportiva" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Massagem Desportiva</h3>
+            <p>Ideal para atletas, foca na prevenção de lesões e na recuperação muscular, melhorando o desempenho e a flexibilidade.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Massagem%20Desportiva." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/drenagem-corporal/01.jpg" alt="Drenagem Linfática Corporal" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Drenagem Linfática Corporal</h3>
+            <p>Estimule o sistema linfático para reduzir a retenção de líquidos, promovendo uma sensação de leveza e bem-estar.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Drenagem%20Corporal." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/pedras-quentes/01.jpg" alt="Massagem Pedras Quentes" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Massagem Pedras Quentes</h3>
+            <p>Sinta o calor terapêutico das pedras vulcânicas aliviando tensões profundas em um relaxamento incomparável.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Massagem%20com%20Pedras%20Quentes." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/ventosa-terapia/01.jpg" alt="Ventosa Terapia" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Ventosa Terapia</h3>
+            <p>Alivie tensões e melhore a circulação com a antiga técnica de Ventosaterapia, promovendo bem-estar e alívio muscular.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Ventosaterapia." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/reflexologia-podal/01.jpg" alt="Reflexologia Podal" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Reflexologia Podal</h3>
+            <p>Estimule pontos de energia nos pés que correspondem a órgãos e sistemas do corpo, promovendo equilíbrio e relaxamento.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Reflexologia%20Podal." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/shiatsu/01.jpg" alt="Shiatsu" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Shiatsu</h3>
+            <p>Experimente a tradicional massagem japonesa que utiliza pressão dos dedos para reequilibrar a energia vital do corpo.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Shiatsu." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/drenagem-facial/01.jpg" alt="Drenagem Linfática Facial" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Drenagem Linfática Facial</h3>
+            <p>Reduza inchaços e melhore a circulação facial, promovendo uma pele mais radiante, saudável e com aspecto descansado.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Drenagem%20Facial." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="esfoliacao-corporal.png" alt="Esfoliação Corporal" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Esfoliação Corporal</h3>
+            <p>Renove sua pele com uma esfoliação profunda, removendo células mortas e deixando-a macia, suave e luminosa.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Esfoliação%20Corporal." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/revitalizacao-facial/03.jpg" alt="Revitalização Facial" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Revitalização Facial</h3>
+            <p>Proporcione nutrição e hidratação intensa para sua pele, restaurando o brilho natural e a vitalidade do seu rosto.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Revitalização%20Facial." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="services/liberacao-miofascial/01.jpg" alt="Liberação Miofascial" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Liberação Miofascial</h3>
+            <p>Terapia profunda para liberar tensões e restrições nas fáscias musculares, melhorando a flexibilidade e reduzindo dores.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Liberação%20Miofascial." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card-image">
+            <img src="limpeza-de-pele-natural.png" alt="Limpeza de Pele Natural" loading="lazy" />
+          </div>
+          <div class="service-card-content">
+            <h3>Limpeza de Pele Natural</h3>
+            <p>Purifique e hidrate sua pele com produtos naturais, removendo impurezas e promovendo um toque fresco e saudável.</p>
+            <div class="service-card-actions">
+              <a href="https://wa.me/551151081983?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20a%20Limpeza%20de%20Pele%20Natural." target="_blank" rel="noopener noreferrer" class="btn btn-card-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i> Agendar
+              </a>
+              <button type="button" class="btn btn-details">
+                Ver Galeria e Detalhes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="carousel-btn next-btn" aria-label="Próximo item">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="carousel-dots" aria-label="Navegação por slides"></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="avaliacoes" class="testimonials-section">
+    <div data-aos="fade-up">
+      <h2>O Que Nossos Clientes Dizem</h2>
+      <p class="section-subtitle">
+        Histórias reais de quem vivenciou momentos inesquecíveis de cuidado e bem-estar no Serenari Spa.
+      </p>
+      
+      <div class="google-badge-container">
+        <a href="https://maps.app.goo.gl/J1rNn4WwhbDD5uqx9" target="_blank" rel="noopener noreferrer" class="google-badge">
+          <div class="google-badge-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="google-badge-score">4.9 ★ (139 avaliações no Google)</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="carousel-wrapper" id="testimonials-wrapper" data-aos="fade-up" data-aos-delay="200">
+      <button type="button" class="carousel-btn prev-btn" aria-label="Item anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="testimonials-container" id="testimonials-slider">
+
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/thauani-cris.png" alt="Thauani Cris" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Thauani Cris</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Eu amei a experiência! Foi incrível, sem dúvidas voltarei mais vezes, recomendo muito. Ambiente super agradável, fui muito bem atendida.&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/dyana-dyh.png" alt="Dyana Dyh" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Dyana Dyh</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Tive uma experiência maravilhosa no spa! O ambiente é extremamente agradável, limpo e acolhedor, transmitindo uma sensação de tranquilidade desde a chegada. A massagem foi simplesmente excelente, muito atenciosa e profissional. Saí renovada e com certeza voltarei mais vezes. Recomendo de olhos fechados!&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/gabrielle-fernandes.png" alt="Gabrielle Fernandes" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Gabrielle Fernandes</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Serenari experiência incrível, recomendo demais! O atendimento foi impecável, atencioso e com aquele cuidado que faz a gente se sentir especial. O ambiente é lindo, tranquilo e muito aconchegante. Fiz uma massagem relaxante e saí sem sentir absolutamente nada das dores. Com certeza voltarei e já indiquei para amigos e familiares.&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/junior-nascimento.png" alt="Junior Nascimento" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Junior Nascimento</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Se você está em dúvida sobre ir ou não ir, quero deixar minha avaliação positivíssima para a Serenari. Atendimento impecável, muito atencioso, educado e extremamente competente. A sessão foi ao mesmo tempo relaxante e revigorante. Recomendo sem medo!&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/amanda-fernandes.png" alt="Amanda Fernandes" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Amanda Fernandes</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Sem dúvidas, o lugar mais aconchegante e acolhedor que já estive em toda a minha vida! Profissionais extremamente qualificados, tratamento ímpar, ambiente aconchegante e lindo! Experiência excelente! Sucesso!&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/maxwell-santos.png" alt="Maxwell da Cruz Santos" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Maxwell da Cruz Santos</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Local aconchegante, ótimo atendimento e serviço super profissional.&rdquo;</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-author">
+            <img src="avatars/fernando-comitre.png" alt="Fernando Comitre" loading="lazy" class="testimonial-avatar" />
+            <div>
+              <h3>Fernando Comitre</h3>
+              <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <p class="testimonial-quote">&ldquo;Ótima experiência. A massagem foi certeira nos pontos de tensão e ajudou demais a aliviar a dor nas costas. Com certeza retornarei.&rdquo;</p>
+        </div>
+      </div>
+
+      <button type="button" class="carousel-btn next-btn" aria-label="Próximo item">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="carousel-dots" aria-label="Navegação por slides"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="sobre" class="about-us-section">
+    <div class="about-us-content" data-aos="fade-up">
+      <img src="logo-about-us.png" alt="Serenari Spa Logo" class="about-us-logo" />
+      <p>
+        O Serenari Spa nasceu com um propósito claro: transformar o toque em bem-estar. Somos um espaço de
+        massoterapia humanizada em Suzano–SP, criado para oferecer mais do que um momento de alívio —
+        proporcionamos experiências completas de cuidado com o corpo e com a mente.
+        <br /><br />
+        Acreditamos que autocuidado é um direito, não um luxo. Cada detalhe importa: o ambiente sensorial, o
+        acolhimento respeitoso, os aromas terapêuticos e a escuta atenta das necessidades de cada corpo. No
+        Serenari, não oferecemos apenas massagens. Entregamos reconexão, presença e leveza.
+      </p>
+
+      <div class="about-gallery">
+
+        <div class="about-gallery-item">
+          <img src="sobre-nos/01.jpg" alt="Lounge de espera do Serenari Spa" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/02.jpg" alt="Recepção do Serenari Spa" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/03.jpg" alt="Estação de café e boas-vindas" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/04.jpg" alt="Espaço de espera com logo Serenari Spa" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/05.jpg" alt="Sala de massagem preparada" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/06.jpg" alt="Detalhe da bandeja de boas-vindas" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/07.jpg" alt="Sala de massagem individual" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/08.jpg" alt="Óleos essenciais e flores" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/09.jpg" alt="Bandeja de boas-vindas com frutas" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/10.jpg" alt="Sala de massagem individual preparada" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/11.jpg" alt="Sala de massagem dupla, vista com espelho" loading="lazy" />
+        </div>
+        <div class="about-gallery-item">
+          <img src="sobre-nos/12.jpg" alt="Sala de massagem dupla preparada" loading="lazy" />
+        </div>
+      </div>
+
+      <blockquote class="acrostico">
+        <strong>S</strong>antuário de paz onde o corpo encontra alívio,<br />
+        <strong>E</strong>quilíbrio entre mente, espírito e energia ativa.<br />
+        <strong>R</strong>enascimento em cada toque, liberação de tensões,<br />
+        <strong>E</strong>ssência de serenidade em cada sessão.<br />
+        <strong>N</strong>utrição da alma, espaço acolhedor e sagrado,<br />
+        <strong>A</strong>colhimento ao presente, na consciência focado.<br />
+        <strong>R</strong>econexão com o ser, presença plena e liberta,<br />
+        <strong>I</strong>ntegração de harmonia, onde a cura é certa.
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PURPOSE SECTION -->
+  <section id="proposito" class="purpose-section">
+    <div data-aos="fade-up">
+      <h2>Mais do que uma Massagem, Uma Experiência de Presença</h2>
+      <p class="section-subtitle">
+        Conheça os pilares que sustentam a essência e o acolhimento humanizado do Serenari Spa.
+      </p>
+    </div>
+
+    <div class="purpose-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="purpose-card">
+        <div class="purpose-icon"><i class="fa-solid fa-hands-holding-heart"></i></div>
+        <h3>Atendimento Humanizado</h3>
+        <p>Escuta atenta e personalizada para entender as reais necessidades do seu corpo e da sua mente.</p>
+      </div>
+
+      <div class="purpose-card">
+        <div class="purpose-icon"><i class="fa-solid fa-spa"></i></div>
+        <h3>Ambiente Sensorial</h3>
+        <p>Aromas terapêuticos, iluminação suave e sonoridade imersiva para desconectar você do mundo exterior.</p>
+      </div>
+
+      <div class="purpose-card">
+        <div class="purpose-icon"><i class="fa-solid fa-leaf"></i></div>
+        <h3>Produtos Selecionados</h3>
+        <p>Óleos essenciais puros, cremes nutritivos e técnicas naturais que cuidam e regeneram a sua pele.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO GALLERY SECTION -->
+  <section id="videos" class="video-gallery-section">
+    <div data-aos="fade-up">
+      <h2>Sinta a Experiência Serenari</h2>
+      <p class="section-subtitle">
+        Dê o primeiro passo em direção ao seu bem-estar. Explore nossos rituais, sinta a atmosfera de serenidade e veja como cuidamos de você.
+      </p>
+    </div>
+
+    <div class="carousel-wrapper" id="videos-wrapper" data-aos="fade-up" data-aos-delay="200">
+      <button type="button" class="carousel-btn prev-btn" aria-label="Item anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="video-cards-container" id="video-gallery-slider">
+
+        <div class="video-card" role="button" tabindex="0">
+          <div class="video-card-preview">
+            <video src="videos/Massagem-01.mp4#t=0.001" muted loop playsinline preload="auto" class="video-card-element"></video>
+            <span class="video-badge">RITUAL DE CUIDADO</span>
+            <div class="video-play-overlay">
+              <div class="video-play-button">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span>VER EXPERIÊNCIA</span>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <h3>Ritual Terapêutico & Toque Humano</h3>
+            <p>Sinta a atmosfera de paz e acolhimento em cada toque de nossas massoterapeutas.</p>
+          </div>
+        </div>
+        <div class="video-card" role="button" tabindex="0">
+          <div class="video-card-preview">
+            <video src="videos/Massagem-02.mp4#t=0.001" muted loop playsinline preload="auto" class="video-card-element"></video>
+            <span class="video-badge">SENSORIAL</span>
+            <div class="video-play-overlay">
+              <div class="video-play-button">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span>VER EXPERIÊNCIA</span>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <h3>Alívio de Tensões & Presença</h3>
+            <p>Técnicas profundas para liberar restrições musculares e renovar suas energias.</p>
+          </div>
+        </div>
+        <div class="video-card" role="button" tabindex="0">
+          <div class="video-card-preview">
+            <video src="videos/Como funciona a massagem.mp4#t=0.001" muted loop playsinline preload="auto" class="video-card-element"></video>
+            <span class="video-badge">ACOLHIMENTO</span>
+            <div class="video-play-overlay">
+              <div class="video-play-button">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <span>VER EXPERIÊNCIA</span>
+            </div>
+          </div>
+          <div class="video-card-info">
+            <h3>Como Funciona Sua Experiência</h3>
+            <p>Conheça o passo a passo da sua recepção, avaliação personalizada e momento de pausa.</p>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="carousel-btn next-btn" aria-label="Próximo item">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="carousel-dots" aria-label="Navegação por slides"></div>
+    </div>
+  </section>
+
+  <!-- ADDRESS SECTION -->
+  <section id="endereco" class="address-section">
+    <div data-aos="fade-up">
+      <h2>Venha nos Fazer uma Visita!</h2>
+      <p class="section-subtitle">Estamos prontos para acolher você no coração de Suzano/SP.</p>
+    </div>
+
+    <div class="address-grid" data-aos="fade-up">
+      <div class="address-unit">
+        <h3>Nosso Espaço em Suzano/SP</h3>
+        <a href="https://maps.app.goo.gl/J1rNn4WwhbDD5uqx9" target="_blank" rel="noreferrer" class="address-link">
+          <i class="fa-solid fa-location-dot"></i> R. Mal. Rondon, 192 - Jardim Santa Helena, Suzano/SP
+        </a>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.6041738319855!2d-46.319880727688655!3d-23.546735014200387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7bd80060d1db%3A0xeff5eecc8a2157e1!2sSERENARI%20SPA%20-%20MASSAGENS!5e0!3m2!1sen!2sbr!4v1761682751052!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="how-to-arrive-card">
+        <div class="how-to-arrive-preview" role="button" tabindex="0">
+          <video src="videos/Como chegar no Serenari.mp4#t=0.001" muted loop playsinline preload="auto" class="how-to-arrive-video"></video>
+          <div class="video-play-overlay">
+            <div class="video-play-button">
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <span>Vídeo Guia de Acesso</span>
+          </div>
+        </div>
+        <div class="how-to-arrive-info">
+          <h3><i class="fa-solid fa-video"></i> Veja Como Chegar</h3>
+          <p>Assista ao vídeo da fachada, acesso e recepção para sua chegada tranquila.</p>
+          <button type="button" class="btn how-to-arrive-btn">
+            <i class="fa-solid fa-play"></i> Ver Vídeo de Acesso
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="operating-hours" data-aos="fade-up">
+      <h3>Horário de Funcionamento</h3>
+      <ul>
+        <li><strong>Segunda a Sábado:</strong> 09:00hr - 19:00hr</li>
+        <li><strong>Domingo:</strong> Fechado</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contato" class="contact-section">
+    <div data-aos="fade-up">
+      <h2>Fale Conosco</h2>
+      <p class="section-subtitle">
+        Tire suas dúvidas ou agende sua experiência diretamente com a nossa equipe.
+      </p>
+    </div>
+
+    <div class="contact-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="contact-info-card">
+        <h3>Atendimento Direto</h3>
+        <p>Estamos prontos para atende-lo com agilidade e carinho via WhatsApp ou telefone.</p>
+        
+        <div class="contact-methods">
+          <a href="https://wa.me/551151081983?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os%20do%20Serenari%20Spa." target="_blank" rel="noopener noreferrer" class="contact-method-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div>
+              <strong>WhatsApp</strong>
+              <span>(11) 5108-1983</span>
+            </div>
+          </a>
+
+          <a href="https://www.instagram.com/serenarispa" target="_blank" rel="noopener noreferrer" class="contact-method-item">
+            <i class="fa-brands fa-instagram"></i>
+            <div>
+              <strong>Instagram</strong>
+              <span>@serenarispa</span>
+            </div>
+          </a>
+
+          <a href="mailto:atendimento@serenarispa.com.br" class="contact-method-item">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <strong>E-mail</strong>
+              <span>atendimento@serenarispa.com.br</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <h3>Envie uma Mensagem</h3>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="form-nome">Seu Nome</label>
+            <input type="text" id="form-nome" name="nome" placeholder="Digite seu nome completo" required>
+          </div>
+          <div class="form-group">
+            <label for="form-email">Seu E-mail ou WhatsApp</label>
+            <input type="text" id="form-email" name="email" placeholder="Seu contato principal" required>
+          </div>
+          <div class="form-group">
+            <label for="form-mensagem">Como podemos ajudar?</label>
+            <textarea id="form-mensagem" name="mensagem" rows="4" placeholder="Escreva sua dúvida ou mensagem" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i class="fa-brands fa-whatsapp"></i> Enviar Mensagem via WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL BAR -->
+  <div class="social-bar">
+    <a href="https://www.instagram.com/serenarispa" target="_blank" rel="noopener noreferrer" aria-label="Siga no Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/551151081983?text=Ol%C3%A1%2C%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20servi%C3%A7os." target="_blank" rel="noopener noreferrer" aria-label="Fale pelo WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="https://maps.app.goo.gl/J1rNn4WwhbDD5uqx9" target="_blank" rel="noopener noreferrer" aria-label="Avalie no Google">
+      <i class="fa-brands fa-google"></i>
+    </a>
+  </div>
+
+  <!-- FLOATING BUTTONS -->
+  <button id="back-to-top" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <p>&copy; 2026 Serenari Spa LTDA. Todos os direitos reservados. CNPJ: 59.668.646/0001-94</p>
+      </div>
+      <div class="footer-links">
+        <a href="termos.html">Termos de Uso</a>
+        <a href="privacidade.html">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT BANNER -->
+  <div id="consent-banner" class="consent-banner">
+    <div class="consent-content">
+      <p>
+        Este site utiliza cookies para personalizar sua experiência e analisar o tráfego. Ao continuar navegando, você concorda com a nossa <a href="privacidade.html">Política de Privacidade</a>.
+      </p>
+      <button type="button" id="consent-accept-btn" class="btn btn-primary">Aceitar Cookies</button>
+    </div>
+  </div>
+
+  <!-- MODAL VIDEO LIGHTBOX -->
+  <div id="video-modal" class="video-modal-backdrop">
+    <div class="video-modal-container">
+      <button type="button" id="video-modal-close" class="video-modal-close" aria-label="Fechar vídeo">&times;</button>
+      <h3 id="video-modal-title" class="video-modal-title">Vídeo</h3>
+      <div class="video-modal-player-wrapper">
+        <video id="video-modal-player" controls playsinline controlslist="nodownload" class="video-modal-player"></video>
+      </div>
+      <div class="video-modal-footer">
+        <a id="video-modal-cta" href="#" target="_blank" rel="noopener noreferrer" class="btn video-modal-cta">
+          <i class="fa-brands fa-whatsapp"></i> Agendar Sessão no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SERVICE DETAILS -->
+  <div id="service-modal" class="video-modal-backdrop">
+    <div class="video-modal-container" style="max-width: 600px;">
+      <button type="button" id="service-modal-close" class="video-modal-close" aria-label="Fechar detalhes">&times;</button>
+      <h3 id="service-modal-title" class="video-modal-title">Detalhes do Serviço</h3>
+      <div style="padding: 20px; background: #fff; overflow-y: auto; max-height: 75vh;">
+        <img id="service-modal-main-img" src="" alt="" style="width: 100%; height: 280px; object-fit: cover; border-radius: 4px; margin-bottom: 15px;">
+        <div id="service-modal-gallery-grid" style="display: flex; gap: 8px; overflow-x: auto; margin-bottom: 15px;"></div>
+        <p id="service-modal-desc" style="font-size: 0.95rem; color: #555; line-height: 1.6; margin-bottom: 20px;"></p>
+        <a id="service-modal-cta" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">
+          <i class="fa-brands fa-whatsapp"></i> Agendar este Serviço no WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL ABOUT GALLERY LIGHTBOX -->
+  <div id="image-modal" class="video-modal-backdrop">
+    <div style="position: relative; max-width: 800px; width: 90%;">
+      <button type="button" id="image-modal-close" class="video-modal-close" style="top: -40px; right: 0;">&times;</button>
+      <img id="image-modal-img" src="" alt="" style="width: 100%; max-height: 80vh; object-fit: contain; border-radius: 4px;">
+      <button type="button" id="image-modal-prev" class="carousel-btn prev-btn" style="left: -20px;"><i class="fa-solid fa-chevron-left"></i></button>
+      <button type="button" id="image-modal-next" class="carousel-btn next-btn" style="right: -20px;"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -22,10 +22,7 @@ export default function Header({ variant }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   const items = NAV_ITEMS.filter((item) => variant === "home" || !item.homeOnly);
-  const logo =
-    variant === "home"
-      ? { src: "/completa-branca.png", width: 1849, height: 911 }
-      : { src: "/logo-serenari-header-removebg-preview.png", width: 627, height: 219 };
+  const logo = { src: "/logo-about-us.png", width: 1566, height: 1239 };
 
   return (
     <>
