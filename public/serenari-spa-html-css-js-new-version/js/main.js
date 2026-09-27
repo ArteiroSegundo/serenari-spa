@@ -125,7 +125,51 @@ document.addEventListener('DOMContentLoaded', () => {
   setupCarousel('about-wrapper', 'about-slider');
   setupCarousel('videos-wrapper', 'video-gallery-slider');
 
-  // Service Card Image Click & Modal Handler
+  // Service Modal Lightbox
+  const serviceModal = document.getElementById('service-modal');
+
+  function openServiceModal(service) {
+    if (!serviceModal) return;
+    const images = [{ src: service.img, width: 1600, height: 1600 }, ...(service.gallery || [])];
+
+    serviceModal.innerHTML = `
+      <span class="close-btn" id="service-modal-close-btn">&times;</span>
+      <div class="service-modal-content" onclick="event.stopPropagation()">
+        <h3 class="service-modal-title">${service.title}</h3>
+        <div class="carousel-wrapper service-modal-wrapper" id="modal-srv-wrapper">
+          <button type="button" class="carousel-btn prev-btn" aria-label="Item anterior"><i class="fa-solid fa-chevron-left"></i></button>
+          <div class="service-modal-carousel" id="modal-srv-slider">
+            ${images.map((img, i) => `<img src="${img.src}" alt="${service.alt} - foto ${i + 1}" class="service-modal-img" />`).join('')}
+          </div>
+          <button type="button" class="carousel-btn next-btn" aria-label="Próximo item"><i class="fa-solid fa-chevron-right"></i></button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+    `;
+
+    setupCarousel('modal-srv-wrapper', 'modal-srv-slider');
+    serviceModal.style.display = 'flex';
+    serviceModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const closeBtn = document.getElementById('service-modal-close-btn');
+    if (closeBtn) closeBtn.addEventListener('click', closeServiceModal);
+  }
+
+  function closeServiceModal() {
+    if (!serviceModal) return;
+    serviceModal.style.display = 'none';
+    serviceModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  if (serviceModal) {
+    serviceModal.addEventListener('click', (e) => {
+      if (e.target === serviceModal) closeServiceModal();
+    });
+  }
+
+  // Bind Service Cards Click to Open Service Modal
   document.querySelectorAll('.service-card').forEach((card, idx) => {
     const srv = SERVICES_DATA[idx];
     if (!srv) return;
@@ -134,51 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
       imgWrapper.addEventListener('click', () => openServiceModal(srv));
     }
   });
-
-  // Service Modal Lightbox
-  const serviceModal = document.getElementById('service-modal');
-  let currentServiceModalIdx = 0;
-
-  function openServiceModal(service) {
-    if (!serviceModal) return;
-    const images = [{ src: service.img, width: 1600, height: 1600 }, ...(service.gallery || [])];
-    const modalContent = serviceModal.querySelector('.service-modal-content');
-    if (!modalContent) return;
-
-    let galleryHtml = images.map((img, i) => `
-      <img src="${img.src}" alt="${service.alt} - foto ${i + 1}" class="service-modal-img" />
-    `).join('');
-
-    modalContent.innerHTML = `
-      <h3 class="service-modal-title">${service.title}</h3>
-      <div class="carousel-wrapper service-modal-wrapper" id="modal-srv-wrapper">
-        <button type="button" class="carousel-btn prev-btn" aria-label="Item anterior"><i class="fa-solid fa-chevron-left"></i></button>
-        <div class="service-modal-carousel" id="modal-srv-slider">
-          ${galleryHtml}
-        </div>
-        <button type="button" class="carousel-btn next-btn" aria-label="Próximo item"><i class="fa-solid fa-chevron-right"></i></button>
-        <div class="carousel-dots"></div>
-      </div>
-    `;
-
-    setupCarousel('modal-srv-wrapper', 'modal-srv-slider');
-    serviceModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeServiceModal() {
-    if (!serviceModal) return;
-    serviceModal.classList.remove('active');
-    document.body.style.overflow = 'auto';
-  }
-
-  if (serviceModal) {
-    serviceModal.addEventListener('click', (e) => {
-      if (e.target === serviceModal || e.target.classList.contains('close-btn')) {
-        closeServiceModal();
-      }
-    });
-  }
 
   // Video Modal Lightbox
   const videoModal = document.getElementById('video-modal');
@@ -195,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (videoModalCta) {
       videoModalCta.href = getWhatsappLink(whatsappMessage || 'Olá, gostaria de agendar uma sessão.');
     }
+    videoModal.style.display = 'flex';
     videoModal.classList.add('active');
     document.body.style.overflow = 'hidden';
     videoPlayer.currentTime = 0;
@@ -203,6 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeVideoModal() {
     if (!videoModal) return;
+    videoModal.style.display = 'none';
     videoModal.classList.remove('active');
     document.body.style.overflow = 'auto';
     if (videoPlayer) {
@@ -243,7 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // About Lightbox
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
-  const lightboxClose = document.querySelector('.lightbox .close-btn');
 
   document.querySelectorAll('.gallery-img.zoomable-image').forEach((img) => {
     img.addEventListener('click', () => {
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (lightbox) {
     lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox || e.target === lightboxClose) {
+      if (e.target === lightbox || e.target.classList.contains('close-btn')) {
         lightbox.style.display = 'none';
         document.body.style.overflow = 'auto';
       }
@@ -288,14 +288,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Cookie Consent Banner Fix
   const consentBanner = document.getElementById('consent-banner');
   const consentBtn = document.getElementById('consent-accept-btn');
   if (consentBanner && consentBtn) {
-    if (!localStorage.getItem('cookie_consent')) {
-      consentBanner.classList.add('visible');
+    if (localStorage.getItem('cookie_consent') === 'accepted') {
+      consentBanner.style.display = 'none';
+      consentBanner.classList.remove('visible');
+    } else {
+      consentBanner.style.display = 'block';
     }
     consentBtn.addEventListener('click', () => {
       localStorage.setItem('cookie_consent', 'accepted');
+      consentBanner.style.display = 'none';
       consentBanner.classList.remove('visible');
     });
   }
