@@ -28,48 +28,57 @@ export default function Header({ variant }: HeaderProps) {
       : { src: "/logo-serenari-header-removebg-preview.png", width: 627, height: 219 };
 
   return (
-    <header className={open ? "open" : undefined}>
-      <Link href="/" className="logo-link">
-        <Image
-          src={logo.src}
-          alt="Serenari Spa Logo"
-          width={logo.width}
-          height={logo.height}
-          className="logo"
-          priority
-        />
-      </Link>
-      <nav>
-        <ul>
-          {items.map((item) => (
-            <li key={item.hash}>
-              <Link
-                href={variant === "home" ? item.hash : `/${item.hash}`}
+    <>
+      <header className={open ? "open" : undefined}>
+        <Link href="/" className="logo-link">
+          <Image
+            src={logo.src}
+            alt="Serenari Spa Logo"
+            width={logo.width}
+            height={logo.height}
+            className="logo"
+            priority
+          />
+        </Link>
+        <nav>
+          <ul>
+            {items.map((item) => (
+              <li key={item.hash}>
+                <Link
+                  href={variant === "home" ? item.hash : `/${item.hash}`}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <a
+                href={whatsappLink("Olá, vim do site e gostaria de mais informações.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="whatsapp-link"
                 onClick={() => setOpen(false)}
               >
-                {item.label}
-              </Link>
+                <i className="fa-brands fa-whatsapp"></i>
+                <span>(11) 5108-1983</span>
+              </a>
             </li>
-          ))}
-          <li>
-            <a
-              href={whatsappLink("Olá, vim do site e gostaria de mais informações.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="whatsapp-link"
-              onClick={() => setOpen(false)}
-            >
-              <i className="fa-brands fa-whatsapp"></i>
-              <span>(11) 5108-1983</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div className="menu-toggle" onClick={() => setOpen((v) => !v)}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </header>
+          </ul>
+        </nav>
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+      {open && <div className="nav-overlay" onClick={() => setOpen(false)} />}
+    </>
   );
 }

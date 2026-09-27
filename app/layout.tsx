@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import AosInit from "@/components/AosInit";
 import "./globals.css";
@@ -10,7 +10,14 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
 });
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL("https://serenari-spa.vercel.app"),
   title: {
     default: "Serenari Spa | Massoterapia Humanizada em Suzano/SP",
     template: "%s | Serenari Spa",
