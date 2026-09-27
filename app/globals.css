@@ -308,8 +308,9 @@ nav a:hover::after {
 }
 
 .services-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     max-width: var(--container-width);
     margin: 0 auto;
@@ -317,6 +318,9 @@ nav a:hover::after {
 
 /* Card Estilo Produto/Vitrine */
 .service-card {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    min-width: 300px;
     background-color: #fff;
     border: 1px solid #eee;
     border-radius: var(--radius-sm);
@@ -324,7 +328,6 @@ nav a:hover::after {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .service-card:hover {
@@ -634,8 +637,9 @@ nav a:hover::after {
 }
 
 .testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 50px;
     max-width: var(--container-width);
@@ -644,6 +648,9 @@ nav a:hover::after {
 }
 
 .testimonial-card {
+    flex: 0 0 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    min-width: 300px;
     background: white;
     padding: 30px;
     border-radius: var(--radius-sm);
