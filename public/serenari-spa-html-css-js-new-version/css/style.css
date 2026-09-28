@@ -1466,6 +1466,7 @@ footer {
     }
 
     .nav-overlay {
+        display: none;
         position: fixed;
         top: 70px;
         left: 0;
@@ -1474,6 +1475,10 @@ footer {
         background: rgba(0, 0, 0, 0.5);
         z-index: 998;
         backdrop-filter: blur(2px);
+    }
+
+    .nav-overlay.active {
+        display: block;
     }
 
     .hero-section {
