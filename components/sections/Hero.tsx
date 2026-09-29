@@ -30,29 +30,24 @@ export default function Hero() {
         </div>
 
         <div className="hero-image-wrapper" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
-          <div className="hero-window-frame">
-            <div className="window-header">
-              <div className="window-dots">
-                <span className="dot dot-red"></span>
-                <span className="dot dot-yellow"></span>
-                <span className="dot dot-green"></span>
-              </div>
-              <div className="window-title-bar">
-                <i className="fa-solid fa-shield-halved window-lock"></i>
-                <span>serenari-spa.com.br</span>
-              </div>
-              <div className="window-action-icon">
-                <i className="fa-solid fa-up-right-from-square"></i>
-              </div>
-            </div>
-            <div className="window-content">
+          <div className="hero-arch-wrapper">
+            <div className="hero-arch-frame">
               <Image
                 src="/background-hero.jpg"
-                alt="Serenari SPA - Ambiente de Cuidado e Bem-estar"
-                width={600}
-                height={400}
-                className="window-image"
+                alt="Serenari SPA - Recepção"
+                width={500}
+                height={600}
+                className="hero-arch-img"
                 priority
+              />
+            </div>
+            <div className="hero-sub-card">
+              <Image
+                src="/background-hero-mobile.jpg"
+                alt="Serenari SPA - Sala de Massagem"
+                width={250}
+                height={300}
+                className="hero-sub-img"
               />
             </div>
           </div>

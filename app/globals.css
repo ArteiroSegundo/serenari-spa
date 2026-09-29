@@ -370,96 +370,36 @@ nav a:hover::after {
     color: #1a2e1d;
 }
 
-/* Moldura de Janela da Imagem (Hero Window Frame) */
+/* Moldura Arqueada do Hero (Estilo Spa Arch Window) */
 .hero-image-wrapper {
     flex: 1 1 48%;
-    max-width: 560px;
+    max-width: 540px;
     width: 100%;
     display: flex;
     justify-content: center;
-}
-
-.hero-window-frame {
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 18px;
-    border: 1px solid rgba(34, 86, 39, 0.15);
-    box-shadow: 
-        0 20px 40px -10px rgba(34, 86, 39, 0.15),
-        0 10px 20px -5px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
 }
 
-.hero-window-frame:hover {
-    transform: translateY(-5px);
-    box-shadow: 
-        0 25px 50px -10px rgba(34, 86, 39, 0.22),
-        0 12px 24px -5px rgba(0, 0, 0, 0.08);
-}
-
-/* Top Bar da Janela */
-.window-header {
-    height: 42px;
-    background-color: #f0f4f0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 16px;
-}
-
-.window-dots {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.window-dots .dot {
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    display: inline-block;
-}
-
-.dot-red { background-color: #ff5f56; }
-.dot-yellow { background-color: #ffbd2e; }
-.dot-green { background-color: #27c93f; }
-
-.window-title-bar {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 4px 16px;
-    border-radius: 20px;
-    font-size: 0.78rem;
-    color: #555555;
-    font-weight: 600;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.window-lock {
-    font-size: 0.75rem;
-    color: var(--primary-color);
-}
-
-.window-action-icon {
-    font-size: 0.8rem;
-    color: #888888;
-}
-
-/* Conteúdo da Janela com Imagem */
-.window-content {
+.hero-arch-wrapper {
     position: relative;
     width: 100%;
-    height: 380px;
-    overflow: hidden;
-    background-color: #e9efe9;
+    max-width: 440px;
+    padding-bottom: 25px;
+    padding-right: 25px;
 }
 
-.window-image {
+/* Moldura Arqueada Principal */
+.hero-arch-frame {
+    width: 100%;
+    height: 480px;
+    border-radius: 200px 200px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(34, 86, 39, 0.12);
+    position: relative;
+    background-color: #f2f5f1;
+}
+
+.hero-arch-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -468,53 +408,36 @@ nav a:hover::after {
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.hero-window-frame:hover .window-image {
+.hero-arch-frame:hover .hero-arch-img {
     transform: scale(1.04);
 }
 
-/* Card Flutuante / Glassmorphism */
-.window-floating-card {
+/* Imagem Sobreposta Secundária (Canto Inferior Direito) */
+.hero-sub-card {
     position: absolute;
-    bottom: 18px;
-    left: 18px;
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 240px;
     border-radius: 12px;
-    padding: 10px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 6px solid #ffffff;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    background-color: #ffffff;
     z-index: 3;
+    transition: transform 0.4s ease;
 }
 
-.card-icon {
-    width: 36px;
-    height: 36px;
-    background-color: rgba(34, 86, 39, 0.1);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
+.hero-sub-card:hover {
+    transform: translateY(-4px) scale(1.02);
 }
 
-.card-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.card-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #1a2e1d;
-}
-
-.card-sub {
-    font-size: 0.75rem;
-    color: #666666;
+.hero-sub-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Responsividade do Hero (Desktop Lado a Lado / Mobile Empilhado com Imagem Abaixo) */
@@ -545,11 +468,25 @@ nav a:hover::after {
     .hero-image-wrapper {
         max-width: 100%;
         width: 100%;
-        order: 2; /* Posiciona a moldura de imagem ABAIXO do texto e botões no mobile */
+        order: 2; /* Posiciona a imagem ABAIXO do texto e botões no mobile */
     }
 
-    .window-content {
-        height: 300px;
+    .hero-arch-wrapper {
+        max-width: 380px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-arch-frame {
+        height: 380px;
+        border-radius: 160px 160px 16px 16px;
+    }
+
+    .hero-sub-card {
+        width: 160px;
+        height: 190px;
+        border-width: 5px;
     }
 }
 
@@ -568,8 +505,21 @@ nav a:hover::after {
         width: 100%;
     }
 
-    .window-content {
-        height: 240px;
+    .hero-arch-wrapper {
+        max-width: 310px;
+        padding-bottom: 15px;
+        padding-right: 15px;
+    }
+
+    .hero-arch-frame {
+        height: 320px;
+        border-radius: 130px 130px 14px 14px;
+    }
+
+    .hero-sub-card {
+        width: 135px;
+        height: 160px;
+        border-width: 4px;
     }
 }
 
