@@ -43,7 +43,7 @@ export default function Hero() {
             </div>
             <div className="hero-sub-card">
               <Image
-                src="/background-hero-mobile.jpg"
+                src="/sala-de-massagem.jpg"
                 alt="Serenari SPA - Sala de Massagem"
                 width={250}
                 height={300}
