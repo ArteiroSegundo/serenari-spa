@@ -5,10 +5,6 @@ export default function Hero() {
     <section className="hero-section" id="hero">
       <div className="hero-container">
         <div className="hero-content" data-aos="fade-up" data-aos-duration="1000">
-          <div className="hero-badge">
-            <i className="fa-solid fa-leaf"></i>
-            <span>Spa Urbano em Suzano / SP</span>
-          </div>
           <h1>
             Seja bem-vindo(a) ao <span className="hero-highlight">Serenari SPA</span>
           </h1>
@@ -30,13 +26,6 @@ export default function Hero() {
               <i className="fa-brands fa-whatsapp"></i>
               <span>Agendar no WhatsApp</span>
             </a>
-          </div>
-
-          <div className="hero-trust-bar">
-            <div className="trust-stars">★★★★★</div>
-            <div className="trust-text">
-              <strong>4.9 / 5.0</strong> em mais de 130 avaliações no Google
-            </div>
           </div>
         </div>
 
@@ -65,15 +54,6 @@ export default function Hero() {
                 className="window-image"
                 priority
               />
-              <div className="window-floating-card">
-                <div className="card-icon">
-                  <i className="fa-solid fa-spa"></i>
-                </div>
-                <div className="card-text">
-                  <span className="card-title">Sua Pausa Merecida</span>
-                  <span className="card-sub">Experiência Única de Spa</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
