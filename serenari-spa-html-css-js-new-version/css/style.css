@@ -1684,11 +1684,11 @@ footer {
     }
 
     .prev-btn {
-        left: 5px;
+        left: 1px;
     }
 
     .next-btn {
-        right: 5px;
+        right: 1px;
     }
 
     .services-container,
