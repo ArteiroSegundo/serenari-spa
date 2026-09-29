@@ -18,7 +18,8 @@ export default function BackToTop() {
       id="back-to-top"
       aria-label="Voltar ao topo"
       title="Voltar ao topo"
-      style={{ display: visible ? "block" : "none" }}
+      className={visible ? "visible" : ""}
+      style={{ display: visible ? "flex" : "none" }}
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
     >
       <i className="fa-solid fa-arrow-up"></i>
