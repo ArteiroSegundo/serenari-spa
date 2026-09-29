@@ -32,13 +32,13 @@ export default function Hero() {
         <div className="hero-image-wrapper" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
           <div className="hero-arch-wrapper">
             <div className="hero-arch-frame">
-              <Image
-                src="/background-hero.jpg"
-                alt="Serenari SPA - Recepção"
-                width={500}
-                height={600}
-                className="hero-arch-img"
-                priority
+              <video
+                src="/videos/Massagem-01.mp4"
+                className="hero-arch-video"
+                autoPlay
+                muted
+                loop
+                playsInline
               />
             </div>
             <div className="hero-sub-card">
