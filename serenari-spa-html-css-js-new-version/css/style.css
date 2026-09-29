@@ -1198,7 +1198,7 @@ footer {
 .carousel-btn {
     display: none;
     position: absolute;
-    top: 45%;
+    top: 39%;
     transform: translateY(-50%);
     background-color: var(--secondary-color);
     color: white;
@@ -1529,6 +1529,7 @@ footer {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
@@ -1693,7 +1694,10 @@ footer {
     .services-container,
     .testimonials-container {
         display: flex !important;
-        overflow-x: auto;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
         scroll-snap-type: x mandatory;
         padding-bottom: 30px !important;
         align-items: stretch;
@@ -1707,7 +1711,7 @@ footer {
     .service-card,
     .testimonial-card {
         min-width: 100%;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         flex: 0 0 100%;
         margin-right: 0;
         display: flex !important;

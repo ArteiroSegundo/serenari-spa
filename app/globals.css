@@ -1524,6 +1524,7 @@ footer {
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
         overflow-x: auto !important;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
@@ -1688,7 +1689,10 @@ footer {
     .services-container,
     .testimonials-container {
         display: flex !important;
-        overflow-x: auto;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        overflow-x: auto !important;
         scroll-snap-type: x mandatory;
         padding-bottom: 30px !important;
         align-items: stretch;
@@ -1702,7 +1706,7 @@ footer {
     .service-card,
     .testimonial-card {
         min-width: 100%;
-        scroll-snap-align: center;
+        scroll-snap-align: start;
         flex: 0 0 100%;
         margin-right: 0;
         display: flex !important;
